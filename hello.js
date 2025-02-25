@@ -1,7 +1,7 @@
-// function greet(person, date) {
-//     console.log(`Hello ${person}, today is ${date}!`);
-//   }
-//   greet("Brendan");
+function greet(person, date) {
+    console.log("Hello ".concat(person, ", today is ").concat(date, "!"));
+}
+greet("Brendan");
 function greet(person, date) {
     console.log("Hello ".concat(person, ", today is ").concat(date.toDateString(), "!"));
 }
