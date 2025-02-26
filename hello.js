@@ -1,10 +1,8 @@
-function greet(person, date) {
-    console.log("Hello ".concat(person, ", today is ").concat(date, "!"));
-}
-greet("Brendan");
-function greet(person, date) {
-    console.log("Hello ".concat(person, ", today is ").concat(date.toDateString(), "!"));
-}
-greet("Maddison", new Date());
-var hello = "Hello World 2";
-console.log(hello);
+"use strict";
+const taskInput = document.getElementById("task");
+const taskButton = document.getElementById("add");
+taskButton === null || taskButton === void 0 ? void 0 : taskButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    const getinput = taskInput.value;
+    console.log(getinput);
+});

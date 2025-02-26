@@ -1,15 +1,8 @@
-function greet(person, date) {
-    console.log(`Hello ${person}, today is ${date}!`);
-  }
-   
-  greet("Brendan");
+const taskInput = document.getElementById("task") as HTMLInputElement;
+const taskButton = document.getElementById("add") as HTMLButtonElement;
 
-function greet(person: string, date: Date) {
-    console.log(`Hello ${person}, today is ${date.toDateString()}!`);
-  }
-   
-  greet("Maddison", new Date());
-
-let hello:string = "Hello World 2";
-
-console.log(hello);
+taskButton?.addEventListener("click", (e) => {
+  e.preventDefault();
+  const getinput = taskInput.value;
+  console.log(getinput);
+});
