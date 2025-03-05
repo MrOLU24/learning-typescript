@@ -1,10 +1,13 @@
-const taskInput = document.getElementById("task") as HTMLInputElement;
-const taskButton = document.getElementById("add") as HTMLButtonElement;
+const taskInput = document.getElementById("task") as HTMLInputElement | null;
+const taskButton = document.getElementById("add") as HTMLButtonElement | null;
 
-taskButton?.addEventListener("click", (e) => {
-  e.preventDefault();
-  
-  const getinput = taskInput.value;
-  console.log(getinput);
-});
-
+if (taskInput && taskButton) {
+  taskButton.addEventListener("click", (e) => {
+    e.preventDefault();
+    
+    const getinput = taskInput.value;
+    console.log(getinput);
+  });
+} else {
+  console.error("Task input or button not found");
+}
